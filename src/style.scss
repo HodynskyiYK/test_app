@@ -1,0 +1,12 @@
+.app {
+    min-height: 100vh;
+}
+
+.dark {
+    color: #fff;
+    background-color: #000;
+
+    hr {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+}
