@@ -4,17 +4,14 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 1
+            count: 0
         };
         this.incrementCount = this.incrementCount.bind(this);
         this.decrementCount = this.decrementCount.bind(this);
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextState.count !== this.state.count) {
-            return true;
-        }
-        return false;
+        return (nextState.count !== this.state.count);
     }
 
     incrementCount() {

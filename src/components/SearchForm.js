@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 const SearchForm = () => {
-    const [value, setValue] = useState('');
+    const [fieldValue, setFieldValue] = useState('');
 
     const formHandler = (event) => {
         event.preventDefault();
 
-        console.log(value);
-        setValue('');
+        // const value = fieldValue;
+        console.log(fieldValue);
+        setFieldValue('');
     };
 
     return (
@@ -21,11 +22,10 @@ const SearchForm = () => {
                     <label htmlFor="defaultTitle">Enter title</label>
                     <input 
                         type="text" 
-                        className="form-control"
-                        placeholder="Ener title"
+                        className="form-control" 
                         id="defaultTitle"
-                        value={value}
-                        onChange={event => setValue(event.target.value)}
+                        value={fieldValue}
+                        onChange={event => setFieldValue(event.target.value)}
                     />
                 </div>
                 <div className="form-group col-2">
