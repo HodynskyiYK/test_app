@@ -4,7 +4,7 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0
+            count: 1
         };
         this.incrementCount = this.incrementCount.bind(this);
         this.decrementCount = this.decrementCount.bind(this);
@@ -36,20 +36,23 @@ class Counter extends React.Component {
 
         return (
             <>
+                <h2>Counter</h2>
                 <hr />
-                <h2>{`Counter: ${this.state.count}`}</h2>
                 <div className="row">
+                    <div className="col-auto">
+                        <button
+                            className="btn btn-danger"
+                            onClick={this.decrementCount}
+                        >-</button>
+                    </div>
+                    <div className="col-auto">
+                        <h2>{this.state.count}</h2>
+                    </div>
                     <div className="col-auto">
                         <button
                             className="btn btn-success"
                             onClick={this.incrementCount}
-                        >Plus</button>
-                    </div>
-                    <div className="col-auto">
-                        <button 
-                            className="btn btn-danger"
-                            onClick={this.decrementCount}
-                        >Minus</button>
+                        >+</button>
                     </div>
                 </div>
             </>
