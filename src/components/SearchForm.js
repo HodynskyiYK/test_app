@@ -6,8 +6,8 @@ const SearchForm = () => {
     const formHandler = (event) => {
         event.preventDefault();
 
-        const value = fieldValue;
-        console.log(value);
+        // const value = fieldValue;
+        console.log(fieldValue);
         setFieldValue('');
     };
 
@@ -32,7 +32,7 @@ const SearchForm = () => {
                     <button 
                         type="submit" 
                         className="btn btn-primary"
-                    >Submit</button>
+                    >Submit form</button>
                 </div>
             </form>
         </>

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className={`app ${themeColor}`}>
       <div className="container">
-        <h1>App</h1>
+        <h1>App title</h1>
         <Counter />
         <SearchForm />
         <hr />
@@ -20,6 +20,11 @@ const App = () => {
           className="btn btn-primary"
           onClick={toggleThemeColor}
         >Change theme</button>
+        <hr />
+        <p>Some new text</p>
+        <p>
+          <button className="btn btn-primary">Some button</button>
+        </p>
       </div>
     </div>
   )

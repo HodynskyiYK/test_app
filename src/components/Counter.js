@@ -11,10 +11,7 @@ class Counter extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextState.count !== this.state.count) {
-            return true;
-        }
-        return false;
+        return (nextState.count !== this.state.count);
     }
 
     incrementCount() {
@@ -43,13 +40,13 @@ class Counter extends React.Component {
                         <button
                             className="btn btn-success"
                             onClick={this.incrementCount}
-                        >Plus</button>
+                        >Plus+</button>
                     </div>
                     <div className="col-auto">
                         <button 
                             className="btn btn-danger"
                             onClick={this.decrementCount}
-                        >Minus</button>
+                        >Minus-</button>
                     </div>
                 </div>
             </>
